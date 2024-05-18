@@ -6,7 +6,7 @@ import { BackgroundBeams } from '@/components/ui/background-beams';
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className=''>
       <nav className='flex justify-between px-4 md:px-8 xl:px-48 py-6'>
         <div>
           <Link href='/'>
