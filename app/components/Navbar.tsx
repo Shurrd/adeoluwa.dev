@@ -2,7 +2,6 @@ import React from 'react';
 import { ModeToggle } from './ThemeToggle';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BackgroundBeams } from '@/components/ui/background-beams';
 
 const Navbar = () => {
   return (
@@ -21,7 +20,6 @@ const Navbar = () => {
         </div>
         <ModeToggle />
       </nav>
-      <BackgroundBeams />
     </nav>
   );
 };
