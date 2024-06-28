@@ -2,11 +2,10 @@ import React from 'react';
 import { ModeToggle } from './ThemeToggle';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BackgroundBeams } from '@/components/ui/background-beams';
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className=''>
       <nav className='flex justify-between px-4 md:px-8 xl:px-48 py-6'>
         <div>
           <Link href='/'>
@@ -21,7 +20,6 @@ const Navbar = () => {
         </div>
         <ModeToggle />
       </nav>
-      <BackgroundBeams />
     </nav>
   );
 };
