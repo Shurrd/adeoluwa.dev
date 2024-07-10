@@ -3,7 +3,7 @@ import { Menu } from '@/types';
 export const menu: Menu[] = [
   {
     id: 1,
-    name: 'Projects',
+    name: 'Recent Projects',
     url: '#projects',
   },
   {

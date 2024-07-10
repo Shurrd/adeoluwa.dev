@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { socials } from '../utils';
+import { Social } from '@/types';
 
 const Socials = () => {
   return (
@@ -14,12 +15,13 @@ const Socials = () => {
         className='rounded-full grayscale'
       />
       {socials.map((social) => {
-        const { id, icon, name, url } = social;
+        const { id, icon, name, url }: Social = social;
         const Icon = icon;
         return (
           <Link
             href={url}
             key={id}
+            target='_blank'
             className='flex items-center gap-2 text-[#949495] hover:text-white transition-all duration-300'
           >
             <Icon size={16} />
