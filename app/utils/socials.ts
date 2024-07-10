@@ -1,7 +1,7 @@
-import { Socials } from '@/types';
+import { Social } from '@/types';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 
-export const socials: Socials[] = [
+export const socials: Social[] = [
   {
     id: 1,
     name: 'linkedin',
