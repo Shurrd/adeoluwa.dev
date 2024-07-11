@@ -11,10 +11,10 @@ const Menu = () => {
           <Link
             key={id}
             href={url}
-            className='flex gap-3 items-center hover:text-white hover:font-semibold group'
+            className='flex gap-3 items-center dark:hover:text-white hover:text-[#212121] hover:font-semibold group'
           >
             <p>0{id}</p>
-            <div className='w-[24px] h-[1px] bg-[#949495] group-hover:w-[40px] group-hover:bg-white transition-all duration-300'></div>
+            <div className='w-[24px] h-[1px] bg-[#949495] group-hover:w-[40px] group-hover:bg-[#212121] dark:group-hover:bg-white transition-all duration-300'></div>
             <p className='tracking-[0.3em] font-semibold'>{name}</p>
           </Link>
         );

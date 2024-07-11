@@ -18,10 +18,18 @@ export interface Project {
   name: string;
   description: string;
   skills: Skill[];
-  isBuilding?: boolean;
+  isMaintaining?: boolean;
+  urls: Url[];
 }
 
 type Skill = {
   id: number;
   label: string;
+};
+
+type Url = {
+  id: number;
+  url: string;
+  name: string;
+  icon: IconType;
 };
