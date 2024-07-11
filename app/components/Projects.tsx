@@ -1,13 +1,27 @@
-import React from 'react';
-import { projects } from '../utils/projects';
+'use client';
+
+import React, { useEffect, useRef, MutableRefObject } from 'react';
+import { projects } from '../utils';
 import { Project, Skill, Url } from '@/types';
 import { IoBuild } from 'react-icons/io5';
 import Link from 'next/link';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
-const Projects = () => {
+const Projects: React.FC = () => {
+  const projectsRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+
+  useEffect(() => {
+    if (projectsRef.current) {
+      const yOffset = -100;
+      const yPosition =
+        projectsRef.current.getBoundingClientRect().top +
+        window.scrollY +
+        yOffset;
+      window.scrollTo({ top: yPosition, behavior: 'smooth' });
+    }
+  }, []);
+
   return (
-    <div className='lg:mt-32 lg:w-2/5 flex flex-col gap-3 group'>
+    <div className='flex flex-col gap-3 group' id='projects' ref={projectsRef}>
       {projects.map((project) => {
         const { id, name, description, skills, isMaintaining, urls }: Project =
           project;
@@ -30,7 +44,7 @@ const Projects = () => {
               })}
             </div>
             <p className='text-2xl font-semibold'>{name}</p>
-            <p className='dark:text-[#949495] text-sm tracking-wider '>
+            <p className='dark:text-[#949495] text-sm tracking-wider'>
               {description}
             </p>
             <div className='flex flex-wrap gap-4 capitalize'>

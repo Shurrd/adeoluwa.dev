@@ -1,6 +1,7 @@
 import React from 'react';
 import Projects from './components/Projects';
 import Hero from './components/Hero';
+import Resume from './components/Resume';
 
 const Page = () => {
   return (
@@ -8,7 +9,10 @@ const Page = () => {
       <div className='flex flex-col lg:flex-row w-full justify-between gap-16'>
         <Hero />
         <div className='hidden lg:block'></div>
-        <Projects />
+        <div className='lg:mt-32 lg:w-2/5 flex flex-col gap-10'>
+          <Projects />
+          <Resume />
+        </div>
       </div>
     </div>
   );

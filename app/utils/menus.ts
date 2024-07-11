@@ -4,7 +4,7 @@ export const menu: Menu[] = [
   {
     id: 1,
     name: 'Recent Projects',
-    url: '#projects',
+    url: '#',
   },
   {
     id: 2,

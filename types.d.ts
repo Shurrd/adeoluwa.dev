@@ -33,3 +33,20 @@ type Url = {
   name: string;
   icon: IconType;
 };
+
+export interface Technologies {
+  id: number;
+  name: string;
+}
+
+export interface Experiences {
+  id: number;
+  title: string;
+  date: string;
+  descriptions: Descriptions[];
+}
+
+type Descriptions = {
+  id: number;
+  description: string;
+};
