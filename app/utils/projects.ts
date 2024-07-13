@@ -1,95 +1,216 @@
-export const projects = [
+import { Project } from '@/types';
+
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+
+export const projects: Project[] = [
   {
-    title: 'Moonbeam',
-    link: 'https://gomoonbeam.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
+    id: 1,
+    name: 'OctoProfile',
+    description:
+      'View your GitHub profile for visual insights on top languages, starred repositories, and more. Sort repositories by size, forks, and stars',
+    urls: [
+      {
+        id: 1,
+        url: 'https://octoclone.vercel.app/',
+        name: 'live',
+        icon: FaExternalLinkAlt,
+      },
+      {
+        id: 2,
+        url: 'https://github.com/Shurrd/github-profile',
+        name: 'github',
+        icon: FaGithub,
+      },
+    ],
+    skills: [
+      {
+        id: 1,
+        label: 'Typescript',
+      },
+      {
+        id: 2,
+        label: 'NextJS',
+      },
+      {
+        id: 3,
+        label: 'Github Polyglot',
+      },
+      {
+        id: 4,
+        label: 'Tailwind css',
+      },
+    ],
   },
   {
-    title: 'Cursor',
-    link: 'https://cursor.so',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/cursor.png',
-  },
-  {
-    title: 'Rogue',
-    link: 'https://userogue.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/rogue.png',
+    id: 2,
+    name: 'Creative People Republic',
+    description:
+      'A portfolio for creatives where art meets technology to deliver exceptional services and turn ideas into success.',
+    urls: [
+      {
+        id: 1,
+        url: 'https://www.creativepeoplerepublic.com/',
+        name: 'live',
+        icon: FaExternalLinkAlt,
+      },
+    ],
+    skills: [
+      {
+        id: 1,
+        label: 'Typescript',
+      },
+      {
+        id: 2,
+        label: 'NextJS',
+      },
+      {
+        id: 3,
+        label: 'Framer Motion',
+      },
+      {
+        id: 4,
+        label: 'Tailwind css',
+      },
+    ],
   },
 
   {
-    title: 'Editorially',
-    link: 'https://editorially.org',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/editorially.png',
+    id: 3,
+    name: 'Tiqpay',
+    description:
+      'TiqPay is a cutting-edge fintech application designed to streamline transactions and elevate your financial management experience.',
+    urls: [
+      {
+        id: 1,
+        url: 'https://www.tiqpayment.com/',
+        name: 'live',
+        icon: FaExternalLinkAlt,
+      },
+    ],
+    skills: [
+      {
+        id: 1,
+        label: 'Typescript',
+      },
+      {
+        id: 2,
+        label: 'NextJS',
+      },
+      {
+        id: 3,
+        label: 'Postgresql',
+      },
+      {
+        id: 4,
+        label: 'NestJS',
+      },
+      {
+        id: 5,
+        label: 'React Native(Expo)',
+      },
+    ],
+    isMaintaining: true,
   },
   {
-    title: 'Editrix AI',
-    link: 'https://editrix.ai',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/editrix.png',
+    id: 4,
+    name: 'Tiqbuy',
+    description:
+      'TiqBuy is an innovative eCommerce website that offers a seamless shopping experience with a wide range of products and intuitive features.',
+    urls: [
+      {
+        id: 1,
+        url: 'https://www.tiqbuy.com.ng/',
+        name: 'live',
+        icon: FaExternalLinkAlt,
+      },
+    ],
+    skills: [
+      {
+        id: 1,
+        label: 'Wordpress',
+      },
+      {
+        id: 2,
+        label: 'Woocommerce',
+      },
+    ],
   },
   {
-    title: 'Pixel Perfect',
-    link: 'https://app.pixelperfect.quest',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/pixelperfect.png',
-  },
-
-  {
-    title: 'Algochurn',
-    link: 'https://algochurn.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/algochurn.png',
-  },
-  {
-    title: 'Aceternity UI',
-    link: 'https://ui.aceternity.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/aceternityui.png',
-  },
-  {
-    title: 'Tailwind Master Kit',
-    link: 'https://tailwindmasterkit.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png',
-  },
-  {
-    title: 'SmartBridge',
-    link: 'https://smartbridgetech.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/smartbridge.png',
-  },
-  {
-    title: 'Renderwork Studio',
-    link: 'https://renderwork.studio',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/renderwork.png',
-  },
-
-  {
-    title: 'Creme Digital',
-    link: 'https://cremedigital.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/cremedigital.png',
+    id: 4,
+    name: 'Booking Corps',
+    description:
+      'BookingCorps simplifies your travel plans with easy-to-use services for booking hotels, shortlets, and car rentals all in one place.',
+    urls: [
+      {
+        id: 1,
+        url: 'https://www.bookingcorps.com/',
+        name: 'live',
+        icon: FaExternalLinkAlt,
+      },
+    ],
+    skills: [
+      {
+        id: 2,
+        label: 'Nginx',
+      },
+      {
+        id: 2,
+        label: 'Docker',
+      },
+      {
+        id: 2,
+        label: 'Cpanel',
+      },
+      {
+        id: 2,
+        label: 'CI/CD',
+      },
+    ],
   },
   {
-    title: 'Golden Bells Academy',
-    link: 'https://goldenbellsacademy.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png',
-  },
-  {
-    title: 'Invoker Labs',
-    link: 'https://invoker.lol',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/invoker.png',
-  },
-  {
-    title: 'E Free Invoice',
-    link: 'https://efreeinvoice.com',
-    thumbnail:
-      'https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png',
+    id: 5,
+    name: 'Tiktik',
+    description:
+      'TikTik is a TikTok clone that brings you the same engaging short-form video experience with a fresh twist',
+    urls: [
+      {
+        id: 1,
+        url: 'https://tiktok-clone-sigma-pied.vercel.app/',
+        name: 'live',
+        icon: FaExternalLinkAlt,
+      },
+      {
+        id: 2,
+        url: 'https://github.com/Shurrd/Tiktok-clone',
+        name: 'github',
+        icon: FaGithub,
+      },
+    ],
+    skills: [
+      {
+        id: 1,
+        label: 'Typepscript',
+      },
+      {
+        id: 2,
+        label: 'NextJS',
+      },
+      {
+        id: 3,
+        label: 'Axios',
+      },
+      {
+        id: 4,
+        label: 'Google Oauth',
+      },
+      {
+        id: 5,
+        label: 'Zustand',
+      },
+      {
+        id: 6,
+        label: 'Sanity',
+      },
+    ],
   },
 ];

@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Adeoluwa',
-  description: 'A Portfolio by Adeoluwa',
+  description: "Adeoluwa's Portfolio",
 };
 
 export default function RootLayout({
@@ -17,17 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
-      <body className={`${inter.className} dark:bg-[#0a0a0a]`}>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-          {children}
-        </ThemeProvider>
+    <html lang='en'>
+      <body className={`${inter.className} bg-[#0a0a0a]`}>
+        <Navbar />
+        {children}
       </body>
     </html>
   );
