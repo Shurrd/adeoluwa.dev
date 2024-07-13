@@ -136,6 +136,38 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 4,
+    name: 'Booking Corps',
+    description:
+      'BookingCorps simplifies your travel plans with easy-to-use services for booking hotels, shortlets, and car rentals all in one place.',
+    urls: [
+      {
+        id: 1,
+        url: 'https://www.bookingcorps.com/',
+        name: 'live',
+        icon: FaExternalLinkAlt,
+      },
+    ],
+    skills: [
+      {
+        id: 2,
+        label: 'Nginx',
+      },
+      {
+        id: 2,
+        label: 'Docker',
+      },
+      {
+        id: 2,
+        label: 'Cpanel',
+      },
+      {
+        id: 2,
+        label: 'CI/CD',
+      },
+    ],
+  },
+  {
     id: 5,
     name: 'Tiktik',
     description:

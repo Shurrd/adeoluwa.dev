@@ -41,6 +41,7 @@ export interface Technologies {
 
 export interface Experiences {
   id: number;
+  company: string;
   title: string;
   date: string;
   descriptions: Descriptions[];

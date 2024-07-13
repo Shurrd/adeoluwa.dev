@@ -3,17 +3,17 @@ import { Menu } from '@/types';
 export const menu: Menu[] = [
   {
     id: 1,
-    name: 'Recent Projects',
-    url: '#',
+    name: 'recent projects',
+    url: '#projects',
   },
   {
     id: 2,
-    name: 'Resume',
+    name: 'resume',
     url: '#resume',
   },
   {
     id: 3,
-    name: 'Contact',
-    url: '#contact',
+    name: "let's chat",
+    url: 'https://calendly.com/engraaadeyemi/30min?month=2024-07',
   },
 ];

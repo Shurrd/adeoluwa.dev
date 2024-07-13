@@ -9,26 +9,19 @@ import Link from 'next/link';
 const Projects: React.FC = () => {
   const projectsRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
-  useEffect(() => {
-    if (projectsRef.current) {
-      const yOffset = -100;
-      const yPosition =
-        projectsRef.current.getBoundingClientRect().top +
-        window.scrollY +
-        yOffset;
-      window.scrollTo({ top: yPosition, behavior: 'smooth' });
-    }
-  }, []);
-
   return (
-    <div className='flex flex-col gap-3 group' id='projects' ref={projectsRef}>
+    <div
+      className='flex flex-col gap-3 group text-white'
+      id='projects'
+      // ref={projectsRef}
+    >
       {projects.map((project) => {
         const { id, name, description, skills, isMaintaining, urls }: Project =
           project;
         return (
           <div
             key={id}
-            className='project-card bg-[#949495] dark:bg-[#16161a] flex flex-col gap-3 p-12 relative transition-all duration-300 group-hover:blur-[2px] hover:!blur-none hover:scale-[1.08]'
+            className='project-card bg-[#16161a] flex flex-col gap-3 p-12 relative transition-all duration-300 group-hover:blur-[2px] hover:!blur-none hover:scale-[1.08]'
           >
             <div className='flex flex-row flex-wrap items-center gap-3'>
               {skills.map((skill) => {
@@ -44,7 +37,7 @@ const Projects: React.FC = () => {
               })}
             </div>
             <p className='text-2xl font-semibold'>{name}</p>
-            <p className='dark:text-[#949495] text-sm tracking-wider'>
+            <p className='text-[#949495] text-sm tracking-wider'>
               {description}
             </p>
             <div className='flex flex-wrap gap-4 capitalize'>
@@ -55,7 +48,7 @@ const Projects: React.FC = () => {
                     key={id}
                     href={link}
                     target='_blank'
-                    className='flex items-center gap-2 dark:text-[#949495] dark:hover:text-white transition-all duration-300 hover:text-white text-sm'
+                    className='flex items-center gap-2 text-[#949495] hover:text-white transition-all duration-300 text-sm'
                   >
                     <p>{name}</p>
                     <Icon />
