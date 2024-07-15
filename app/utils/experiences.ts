@@ -28,7 +28,12 @@ export const experiences: Experiences[] = [
       {
         id: 1,
         description:
-          "Collaborated with an external team to integrate the Tiqpay payment gateway withthe existing frontend, ensuring seamless payment processing. Conducted rigoroustesting and troubleshooting to ensure the payment gateway's compatibility andfunctionality.",
+          'Collaborated with an external team to integrate the Tiqpay payment gateway with the existing frontend, ensuring seamless payment processing.',
+      },
+      {
+        id: 2,
+        description:
+          "Conducted rigorous testing and troubleshooting to ensure the payment gateway's compatibility and functionality.",
       },
     ],
   },
@@ -46,7 +51,7 @@ export const experiences: Experiences[] = [
       {
         id: 2,
         description:
-          'Spearheaded the research, development and integration of a ticketing help desksystem, streamlining support operations, improving response times, andenhancing overall user satisfaction by providing efficient and organized assistance',
+          'Spearheaded the research, development and integration of a ticketing help-desk system, streamlining support operations, improving response times, and enhancing overall user satisfaction by providing efficient and organized assistance',
       },
     ],
   },
@@ -64,7 +69,7 @@ export const experiences: Experiences[] = [
       {
         id: 2,
         description:
-          ' Collaborated closely with developers, marketers, and sales personnel on the migration of our e-commerce platform from WooCommerce to a modern Next.js application powered by the MedusaJS headless commerce framework.',
+          'Collaborated closely with developers, marketers, and sales personnel on the migration of our e-commerce platform from WooCommerce to a modern Next.js application powered by the MedusaJS headless commerce framework.',
       },
     ],
   },
