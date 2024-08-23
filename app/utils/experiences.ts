@@ -41,7 +41,7 @@ export const experiences: Experiences[] = [
     id: 3,
     company: 'Gracetech Group',
     title: 'Lead Software Engineer',
-    date: 'Jan 2023',
+    date: 'Jun 2023',
     descriptions: [
       {
         id: 1,
