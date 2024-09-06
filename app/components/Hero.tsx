@@ -1,6 +1,8 @@
 import React from 'react';
 import Menu from './Menu';
 import Socials from './Socials';
+import Link from 'next/link';
+import { CiMail } from 'react-icons/ci';
 
 const Hero = () => {
   return (
@@ -22,6 +24,14 @@ const Hero = () => {
         <Menu />
       </div>
       <Socials />
+      <Link
+        href={'https://calendly.com/engraaadeyemi/30min?month=2024-07'}
+        className='tracking-[0.06em] font-semibold text-[#949495] border-b w-max pb-1 flex items-center gap-4 lg:hidden'
+        target='_blank'
+      >
+        <p>Let's Chat</p>
+        <CiMail />
+      </Link>
     </div>
   );
 };
