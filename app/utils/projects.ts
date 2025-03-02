@@ -119,7 +119,7 @@ export const projects: Project[] = [
     urls: [
       {
         id: 1,
-        url: 'https://www.tiqbuy.com.ng/',
+        url: 'https://www.tiqbuy.com/',
         name: 'live',
         icon: FaExternalLinkAlt,
       },
