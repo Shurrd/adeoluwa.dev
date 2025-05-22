@@ -55,6 +55,14 @@ export const technologies: Technologies[] = [
   },
   {
     id: 14,
-    name: 'Version Control',
+    name: 'kafka',
+  },
+  {
+    id: 15,
+    name: 'redis',
+  },
+  {
+    id: 16,
+    name: 'git',
   },
 ];
