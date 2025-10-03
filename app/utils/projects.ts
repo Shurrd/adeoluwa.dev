@@ -1,18 +1,35 @@
 import { Project } from '@/types';
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaApple,
+  FaGooglePlay,
+} from 'react-icons/fa';
 
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 export const projects: Project[] = [
   {
     id: 1,
-    name: 'EZ Gas',
+    name: 'EzGas',
     description:
-      'EZ Gas is a modern platform designed to simplify gas ordering and delivery for households and businesses. The mobile app ensures seamless ordering, real-time tracking, and reliable service powered by a scalable backend infrastructure.',
+      'EzGas is a modern platform designed to simplify gas ordering and delivery for households and businesses. The mobile app ensures seamless ordering, real-time tracking, and reliable service powered by a scalable backend infrastructure.',
     urls: [
       {
         id: 1,
         url: 'https://myezgas.com/',
-        name: 'live',
+        name: 'Website',
         icon: FaExternalLinkAlt,
+      },
+      {
+        id: 2,
+        url: 'https://apps.apple.com/us/app/ez-gas/id6751143373',
+        name: 'App Store',
+        icon: FaApple,
+      },
+      {
+        id: 3,
+        url: 'https://play.google.com/store/apps/details?id=com.devsynctech.ezgasmobilefrontend',
+        name: 'Google Play',
+        icon: FaGooglePlay,
       },
     ],
     skills: [
