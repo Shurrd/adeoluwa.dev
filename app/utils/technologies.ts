@@ -65,4 +65,20 @@ export const technologies: Technologies[] = [
     id: 16,
     name: 'git',
   },
+  {
+    id: 17,
+    name: 'mongodb',
+  },
+  {
+    id: 18,
+    name: 'mysql',
+  },
+  {
+    id: 19,
+    name: 'sequelize',
+  },
+  {
+    id: 20,
+    name: 'aws',
+  },
 ];

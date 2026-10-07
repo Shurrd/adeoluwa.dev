@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 
-const montserrat = Montserrat({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin', 'latin-ext', 'vietnamese'],
+});
 
 export const metadata: Metadata = {
   title: 'Abraham Adeoluwa Adeyemi | Software Engineer',
@@ -23,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${montserrat.className} bg-[#0a0a0a]`}>
+      <body className={`${inter.className} bg-[#0a0a0a]`}>
         <Navbar />
         {children}
       </body>
