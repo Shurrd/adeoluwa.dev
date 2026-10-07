@@ -1,6 +1,11 @@
 import { Project } from '@/types';
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaApple,
+  FaGooglePlay,
+} from 'react-icons/fa';
 
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 export const projects: Project[] = [
   {
     id: 1,
@@ -13,6 +18,18 @@ export const projects: Project[] = [
         url: 'https://syntheriumengine.com/',
         name: 'live',
         icon: FaExternalLinkAlt,
+      },
+      {
+        id: 2,
+        url: 'https://apps.apple.com/us/app/ez-gas/id6751143373',
+        name: 'App Store',
+        icon: FaApple,
+      },
+      {
+        id: 3,
+        url: 'https://play.google.com/store/apps/details?id=com.devsynctech.ezgasmobilefrontend',
+        name: 'Google Play',
+        icon: FaGooglePlay,
       },
     ],
     skills: [
