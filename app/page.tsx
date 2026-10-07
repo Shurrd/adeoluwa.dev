@@ -1,20 +1,17 @@
 import React from 'react';
-import Projects from './components/Projects';
 import Hero from './components/Hero';
+import Projects from './components/Projects';
 import Resume from './components/Resume';
+import Footer from './components/Footer';
 
 const Page = () => {
   return (
-    <div className='w-full rounded-md dark:bg-neutral-950 flex flex-col justify-between antialiased px-4 md:px-8 xl:px-48 py-6 mb-32'>
-      <div className='flex flex-col lg:flex-row w-full justify-between gap-16'>
-        <Hero />
-        <div className='hidden lg:block'></div>
-        <div className='lg:mt-32 lg:w-2/5 flex flex-col gap-10'>
-          <Projects />
-          <Resume />
-        </div>
-      </div>
-    </div>
+    <main className='mx-auto flex w-full max-w-2xl flex-col gap-28 px-6 pb-24 pt-36 antialiased'>
+      <Hero />
+      <Projects />
+      <Resume />
+      <Footer />
+    </main>
   );
 };
 

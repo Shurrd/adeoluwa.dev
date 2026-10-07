@@ -9,14 +9,14 @@ import {
 export const projects: Project[] = [
   {
     id: 1,
-    name: 'EzGas',
+    name: 'Syntherium',
     description:
-      'EzGas is a modern platform designed to simplify gas ordering and delivery for households and businesses. The mobile app ensures seamless ordering, real-time tracking, and reliable service powered by a scalable backend infrastructure.',
+      'Syntherium is an integrity protocol engine built by Synctech Innovations: one protocol serving multiple regulated industries with immutable, append-only records, atomic transactions and a single source of truth. It underpins EZGas, ZynGas and GPAS.',
     urls: [
       {
         id: 1,
-        url: 'https://myezgas.com/',
-        name: 'Website',
+        url: 'https://syntheriumengine.com/',
+        name: 'live',
         icon: FaExternalLinkAlt,
       },
       {
@@ -33,6 +33,106 @@ export const projects: Project[] = [
       },
     ],
     skills: [
+      { id: 1, label: 'Typescript' },
+      { id: 2, label: 'NestJS' },
+      { id: 3, label: 'Docker' },
+      { id: 4, label: 'AWS' },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Synctech Innovations',
+    description:
+      'Synctech Innovations is a software company based in Lagos, Nigeria, building web, mobile and infrastructure products including EZGas and Syntherium.',
+    urls: [
+      {
+        id: 1,
+        url: 'https://synctechinnovations.com/',
+        name: 'live',
+        icon: FaExternalLinkAlt,
+      },
+    ],
+    skills: [
+      { id: 1, label: 'NextJS' },
+      { id: 2, label: 'Typescript' },
+      { id: 3, label: 'React Native (Expo)' },
+      { id: 4, label: 'AWS' },
+    ],
+  },
+  {
+    id: 3,
+    name: 'WebRise Nigeria',
+    description:
+      'WebRise is a Nigerian digital agency that designs and builds websites, business systems and mobile apps for local businesses, with fixed naira pricing, monthly Paystack payments and full ownership after the final payment.',
+    urls: [
+      {
+        id: 1,
+        url: 'https://webrisenigeria.com/',
+        name: 'live',
+        icon: FaExternalLinkAlt,
+      },
+    ],
+    skills: [
+      { id: 1, label: 'NextJS' },
+      { id: 2, label: 'Typescript' },
+      { id: 3, label: 'Tailwind' },
+      { id: 4, label: 'Paystack' },
+    ],
+  },
+  {
+    id: 4,
+    name: 'Speeddi Foods',
+    description:
+      'Speeddi Foods lets customers order staple foods for themselves or family, paying immediately or later once their credit is approved.',
+    urls: [
+      {
+        id: 1,
+        url: 'https://speeddifoods.com/',
+        name: 'live',
+        icon: FaExternalLinkAlt,
+      },
+    ],
+    skills: [
+      { id: 1, label: 'NextJS' },
+      { id: 2, label: 'Typescript' },
+      { id: 3, label: 'Tailwind' },
+      { id: 4, label: 'Paystack' },
+    ],
+  },
+  {
+    id: 5,
+    name: 'Depot Price Today',
+    description:
+      'Depot Price Today is a web platform for keeping up with daily depot prices.',
+    urls: [
+      {
+        id: 1,
+        url: 'https://depotpricetoday.com/',
+        name: 'live',
+        icon: FaExternalLinkAlt,
+      },
+    ],
+    skills: [
+      { id: 1, label: 'NextJS' },
+      { id: 2, label: 'Typescript' },
+      { id: 3, label: 'Tailwind' },
+      { id: 4, label: 'Paystack' },
+    ],
+  },
+  {
+    id: 6,
+    name: 'EZ Gas',
+    description:
+      'EZ Gas is a modern platform designed to simplify gas ordering and delivery for households and businesses. The mobile app ensures seamless ordering, real-time tracking, and reliable service powered by a scalable backend infrastructure.',
+    urls: [
+      {
+        id: 1,
+        url: 'https://myezgas.com/',
+        name: 'live',
+        icon: FaExternalLinkAlt,
+      },
+    ],
+    skills: [
       { id: 1, label: 'React Native (Expo)' },
       { id: 2, label: 'NestJS' },
       { id: 3, label: 'NATS' },
@@ -43,26 +143,7 @@ export const projects: Project[] = [
     isMaintaining: true,
   },
   {
-    id: 2,
-    name: 'Gracetech Properties',
-    description:
-      'Gracetech Properties is the real estate investment arm of Gracetech Group, offering asset management and property development advisory services with innovative designs and modern living solutions.',
-    urls: [
-      {
-        id: 1,
-        url: 'https://gracetechproperties.com/',
-        name: 'live',
-        icon: FaExternalLinkAlt,
-      },
-    ],
-    skills: [
-      { id: 1, label: 'NextJs' },
-      { id: 2, label: 'Shadcn UI' },
-      { id: 3, label: 'Typescript' },
-    ],
-  },
-  {
-    id: 3,
+    id: 7,
     name: 'Partner Mobile',
     description:
       'Partner Mobile is a tech company that provides high-speed fiber optic internet connectivity and offers a wide range of mobile phones and accessories. The platform ensures seamless user experience and reliable services through a scalable and secure backend system.',
@@ -84,50 +165,7 @@ export const projects: Project[] = [
     isMaintaining: true,
   },
   {
-    id: 4,
-    name: 'Booking Corps',
-    description:
-      'BookingCorps simplifies your travel plans with easy-to-use services for booking hotels, shortlets, and car rentals all in one place.',
-    urls: [
-      {
-        id: 1,
-        url: 'https://www.bookingcorps.com/',
-        name: 'live',
-        icon: FaExternalLinkAlt,
-      },
-    ],
-    skills: [
-      { id: 1, label: 'Nginx' },
-      { id: 2, label: 'Docker' },
-      { id: 3, label: 'Cpanel' },
-      { id: 4, label: 'CI/CD' },
-      { id: 5, label: 'Stripe' },
-    ],
-  },
-  {
-    id: 5,
-    name: 'Tiqbuy',
-    description:
-      'TiqBuy is an innovative eCommerce website that offers a seamless shopping experience with a wide range of products and intuitive features.',
-    urls: [
-      {
-        id: 1,
-        url: 'https://www.tiqbuy.com/',
-        name: 'live',
-        icon: FaExternalLinkAlt,
-      },
-    ],
-    skills: [
-      { id: 1, label: 'Wordpress' },
-      { id: 2, label: 'Woocommerce' },
-      { id: 3, label: 'NextJS' },
-      { id: 4, label: 'MedusaJS' },
-      { id: 5, label: 'Postgresql' },
-      { id: 6, label: 'Redis' },
-    ],
-  },
-  {
-    id: 6,
+    id: 8,
     name: 'Tiqpay',
     description:
       'TiqPay is a cutting-edge fintech application designed to streamline transactions and elevate your financial management experience.',

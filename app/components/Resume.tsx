@@ -1,74 +1,72 @@
-import React from 'react';
-import { experiences, technologies } from '../utils';
-import { Descriptions, Experiences, Technologies } from '@/types';
+import React from "react";
+import { experiences, technologies } from "../utils";
+import { Descriptions, Experiences, Technologies } from "@/types";
+import { FiPlus } from "react-icons/fi";
+import Reveal from "./Reveal";
+
+const Heading = ({
+  index,
+  children,
+}: {
+  index: string;
+  children: React.ReactNode;
+}) => (
+  <h2 className="flex items-center gap-4 text-xs font-medium uppercase tracking-[0.25em] text-[#6b6b6e]">
+    <span>{index}</span>
+    <span className="h-px w-8 bg-[#3f3f46]" />
+    <span>{children}</span>
+  </h2>
+);
 
 const Resume = () => {
   return (
-    <>
-      <p className='text-white text-[14px] tracking-[0.14em] uppercase font-bold lg:hidden'>
-        Resume
-      </p>
-      <div
-        className='flex flex-col gap-6 bg-[#16161a] p-12 text-white'
-        id='resume'
-      >
-        <div className='flex flex-col gap-3'>
-          <p className='text-2xl font-semibold'>Software Engineer</p>
-          <p className='text-[#949495] text-sm tracking-wider'>
-            I’m a software engineer, passionate about transforming ideas into
-            innovative solutions. I develop robust applications with user
-            experience as a top priority.
-          </p>
-        </div>
-
-        <div className='flex flex-col gap-3'>
-          <p className='text-2xl font-semibold'>Technologies</p>
-          <div className='flex flex-row flex-wrap items-center gap-3'>
-            {technologies.map((technology) => {
-              const { id, name }: Technologies = technology;
-              return (
-                <p
-                  key={id}
-                  className='text-[#949495] text-[10px] tracking-[0.14em] uppercase font-bold'
+    <section id="resume" className="flex scroll-mt-28 flex-col gap-20">
+      <div className="flex flex-col gap-10">
+        <Reveal>
+          <Heading index="02">Experience</Heading>
+        </Reveal>
+        <div className="flex flex-col [&>div:first-child>details]:border-t-0">
+          {experiences.map((experience: Experiences, index: number) => {
+            const { id, company, title, date, descriptions } = experience;
+            return (
+              <Reveal key={id}>
+                <details
+                  open={index === 0}
+                  className="group border-t border-white/10"
                 >
-                  {name}
-                </p>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className='flex flex-col gap-3'>
-          <p className='text-2xl font-semibold'>Experiences</p>
-          <div className='flex flex-col gap-6 text-sm'>
-            {experiences.map((experience) => {
-              const { id, company, title, date, descriptions }: Experiences =
-                experience;
-              return (
-                <div key={id} className='flex flex-col gap-2'>
-                  <p className='text-xs tracking-[0.14em] uppercase font-bold'>
-                    {company} - {title}
-                  </p>
-                  <p className='text-[#949495] text-[10px] tracking-[0.14em] uppercase font-bold'>
-                    {date}
-                  </p>
-                  <div className='flex flex-col gap-2'>
-                    {descriptions.map((item) => {
-                      const { id, description }: Descriptions = item;
-                      return (
-                        <p key={id} className='text-[#949495] text-sm'>
-                          - {description}
-                        </p>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6 transition-colors [&:hover_p:first-of-type]:text-white [&::-webkit-details-marker]:hidden">
+                    <div className="flex flex-col gap-1 sm:flex-row sm:gap-8">
+                      <span className="w-40 shrink-0 text-xs leading-6 tabular-nums text-[#6b6b6e]">
+                        {date}
+                      </span>
+                      <div>
+                        <p className="font-medium text-white">{title}</p>
+                        <p className="text-sm text-[#949495]">{company}</p>
+                      </div>
+                    </div>
+                    <FiPlus className="mt-1 shrink-0 text-[#6b6b6e] transition-transform duration-200 group-open:rotate-45" />
+                  </summary>
+                  <ul className="mb-8 flex list-disc flex-col gap-2.5 pl-4 text-sm leading-relaxed text-[#949495] marker:text-[#52525b] sm:ml-48">
+                    {descriptions.map((item: Descriptions) => (
+                      <li key={item.id}>{item.description}</li>
+                    ))}
+                  </ul>
+                </details>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
-    </>
+
+      <Reveal className="flex flex-col gap-6">
+        <Heading index="03">Skills</Heading>
+        <p className="text-sm capitalize leading-loose text-[#949495]">
+          {technologies
+            .map((technology: Technologies) => technology.name)
+            .join(" · ")}
+        </p>
+      </Reveal>
+    </section>
   );
 };
 

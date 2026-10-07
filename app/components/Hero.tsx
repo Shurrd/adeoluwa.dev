@@ -1,38 +1,67 @@
-import React from 'react';
-import Menu from './Menu';
-import Socials from './Socials';
-import Link from 'next/link';
-import { CiMail } from 'react-icons/ci';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { socials } from "../utils";
+import { Social } from "@/types";
 
 const Hero = () => {
   return (
-    <div className='lg:fixed lg:z-[999] mt-32 lg:w-1/2 flex flex-col lg:h-[40rem] gap-6 lg:justify-between'>
-      <div className='flex flex-col gap-4 text-white'>
-        <p className='text-3xl lg:text-4xl font-bold'>
-          Adéolúwa Abraham Adéyẹmí
-        </p>
-        <p className='text-xl lg:text-[22px] font-semibold'>
-          Software Engineer
-        </p>
-        <p className='text-sm text-[#949495] mt-4 lg:pr-56'>
-          I specialize in developing{' '}
-          <span className='text-white underline'>web</span> and{' '}
-          <span className='text-white underline'>mobile</span> applications and
-          setting up infrastructure, creating robust and{' '}
-          <span className='text-white underline'>scalable</span> solutions.
-        </p>
-        <Menu />
-      </div>
-      <Socials />
-      <Link
-        href={'https://calendly.com/engraaadeyemi/30min?month=2024-07'}
-        className='tracking-[0.06em] font-semibold text-[#949495] border-b w-max pb-1 flex items-center gap-4 lg:hidden'
-        target='_blank'
+    <header className="flex flex-col gap-8 text-white">
+      <Image
+        src="/profile.png"
+        alt="Adéolúwa Abraham Adéyẹmí"
+        width={56}
+        height={56}
+        className="rise rounded-full grayscale ring-1 ring-white/10"
+      />
+      <div
+        className="rise flex flex-col gap-2"
+        style={{ animationDelay: "80ms" }}
       >
-        <p>Let's Chat</p>
-        <CiMail />
-      </Link>
-    </div>
+        <h1 className="text-3xl font-semibold tracking-[-0.03em] sm:text-[2.6rem] sm:leading-[1.1]">
+          Adéolúwa Abraham Adéyẹmí
+        </h1>
+        <p className="text-[#949495]">Software Engineer · Lagos, Nigeria</p>
+      </div>
+      <p
+        className="rise max-w-xl text-[15px] leading-relaxed text-[#b4b4b8]"
+        style={{ animationDelay: "160ms" }}
+      >
+        I design and ship web and mobile applications, backend systems and the
+        cloud infrastructure they run on, with a focus on performance,
+        reliability and clear collaboration. Currently building revenue
+        platforms at Etranzact and leading product engineering at Synctech
+        Innovations.
+      </p>
+      <div
+        className="rise flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[#949495]"
+        style={{ animationDelay: "240ms" }}
+      >
+        <Link
+          href="mailto:engraaadeyemi@gmail.com"
+          className="text-white underline underline-offset-4 decoration-white/30 transition-colors hover:decoration-white"
+        >
+          Email
+        </Link>
+        {socials.map((social: Social) => (
+          <Link
+            key={social.id}
+            href={social.url}
+            target="_blank"
+            className="capitalize transition-colors hover:text-white"
+          >
+            {social.name}
+          </Link>
+        ))}
+        <Link
+          href="https://calendly.com/engraaadeyemi/30min?month=2024-07"
+          target="_blank"
+          className="transition-colors hover:text-white"
+        >
+          Book a call
+        </Link>
+      </div>
+    </header>
   );
 };
 
