@@ -26,7 +26,7 @@ const Projects: React.FC = () => {
                   <Link
                     href={urls[0].url}
                     target="_blank"
-                    className="group flex items-center gap-1.5 text-lg font-medium text-white"
+                    className="group flex items-center gap-1.5 text-lg font-medium text-white transition-transform duration-300 hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
                   >
                     {name}
                     <FiArrowUpRight className="text-[#6b6b6e] transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" />
@@ -45,16 +45,22 @@ const Projects: React.FC = () => {
                 </p>
                 {urls.length > 1 && (
                   <div className="flex gap-5 pt-1 text-xs text-[#949495]">
-                    {urls.map((url: Url) => (
-                      <Link
-                        key={url.id}
-                        href={url.url}
-                        target="_blank"
-                        className="capitalize transition-colors hover:text-white"
-                      >
-                        {url.name}
-                      </Link>
-                    ))}
+                    {urls.map((url: Url) =>
+                      url.comingSoon ? (
+                        <span key={url.id} className="text-[#6b6b6e]">
+                          {url.name} (coming soon)
+                        </span>
+                      ) : (
+                        <Link
+                          key={url.id}
+                          href={url.url}
+                          target="_blank"
+                          className="link-line press capitalize hover:text-white"
+                        >
+                          {url.name}
+                        </Link>
+                      ),
+                    )}
                   </div>
                 )}
               </article>

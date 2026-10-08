@@ -12,7 +12,7 @@ const Hero = () => {
         alt="Adéolúwa Abraham Adéyẹmí"
         width={56}
         height={56}
-        className="rise rounded-full grayscale ring-1 ring-white/10"
+        className="rise rounded-full ring-1 ring-white/10 grayscale transition-all duration-500 hover:scale-105 hover:grayscale-0 hover:ring-white/30"
       />
       <div
         className="rise flex flex-col gap-2"
@@ -39,7 +39,7 @@ const Hero = () => {
       >
         <Link
           href="mailto:engraaadeyemi@gmail.com"
-          className="text-white underline underline-offset-4 decoration-white/30 transition-colors hover:decoration-white"
+          className="press text-white underline underline-offset-4 decoration-white/30 transition-colors hover:decoration-white"
         >
           Email
         </Link>
@@ -48,7 +48,7 @@ const Hero = () => {
             key={social.id}
             href={social.url}
             target="_blank"
-            className="capitalize transition-colors hover:text-white"
+            className="link-line press capitalize hover:text-white"
           >
             {social.name}
           </Link>
@@ -56,7 +56,7 @@ const Hero = () => {
         <Link
           href="https://calendly.com/engraaadeyemi/30min?month=2024-07"
           target="_blank"
-          className="transition-colors hover:text-white"
+          className="link-line press hover:text-white"
         >
           Book a call
         </Link>

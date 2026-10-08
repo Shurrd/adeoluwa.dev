@@ -19,18 +19,6 @@ export const projects: Project[] = [
         name: 'live',
         icon: FaExternalLinkAlt,
       },
-      {
-        id: 2,
-        url: 'https://apps.apple.com/us/app/ez-gas/id6751143373',
-        name: 'App Store',
-        icon: FaApple,
-      },
-      {
-        id: 3,
-        url: 'https://play.google.com/store/apps/details?id=com.devsynctech.ezgasmobilefrontend',
-        name: 'Google Play',
-        icon: FaGooglePlay,
-      },
     ],
     skills: [
       { id: 1, label: 'Typescript' },
@@ -103,13 +91,26 @@ export const projects: Project[] = [
     id: 5,
     name: 'Depot Price Today',
     description:
-      'Depot Price Today is a web platform for keeping up with daily depot prices.',
+      'Depot Price Today is a platform for keeping up with daily depot prices, available on the web and as a mobile app.',
     urls: [
       {
         id: 1,
         url: 'https://depotpricetoday.com/',
         name: 'live',
         icon: FaExternalLinkAlt,
+      },
+      {
+        id: 2,
+        url: 'https://play.google.com/store/apps/details?id=com.synctech.depotpricetoday&hl=en',
+        name: 'Google Play',
+        icon: FaGooglePlay,
+      },
+      {
+        id: 3,
+        url: '',
+        name: 'App Store',
+        icon: FaApple,
+        comingSoon: true,
       },
     ],
     skills: [
@@ -131,6 +132,18 @@ export const projects: Project[] = [
         name: 'live',
         icon: FaExternalLinkAlt,
       },
+      {
+        id: 2,
+        url: 'https://apps.apple.com/us/app/ez-gas/id6751143373',
+        name: 'App Store',
+        icon: FaApple,
+      },
+      {
+        id: 3,
+        url: 'https://play.google.com/store/apps/details?id=com.devsynctech.ezgasmobilefrontend',
+        name: 'Google Play',
+        icon: FaGooglePlay,
+      },
     ],
     skills: [
       { id: 1, label: 'React Native (Expo)' },
@@ -144,6 +157,56 @@ export const projects: Project[] = [
   },
   {
     id: 7,
+    name: 'ZynGas Enterprise',
+    description:
+      'ZynGas Enterprise is the customer-facing mobile app for ordering gas and tracking deliveries, powered by the Syntherium engine.',
+    urls: [
+      {
+        id: 1,
+        url: 'https://apps.apple.com/ng/app/zyngas-enterprise/id6762097803',
+        name: 'App Store',
+        icon: FaApple,
+      },
+      {
+        id: 2,
+        url: 'https://play.google.com/store/apps/details?id=com.devsynctech.zyngasenterprise&hl=en',
+        name: 'Google Play',
+        icon: FaGooglePlay,
+      },
+    ],
+    skills: [
+      { id: 1, label: 'React Native (Expo)' },
+      { id: 2, label: 'Typescript' },
+      { id: 3, label: 'Zustand' },
+    ],
+  },
+  {
+    id: 8,
+    name: 'Energo Logistics',
+    description:
+      'Energo Logistics is the driver app that supports EZ Gas and ZynGas deliveries, helping drivers accept, manage and complete orders.',
+    urls: [
+      {
+        id: 1,
+        url: 'https://apps.apple.com/ng/app/energo-logistics/id6762177167',
+        name: 'App Store',
+        icon: FaApple,
+      },
+      {
+        id: 2,
+        url: 'https://play.google.com/store/apps/details?id=com.devsynctech.paccelogistics&hl=en',
+        name: 'Google Play',
+        icon: FaGooglePlay,
+      },
+    ],
+    skills: [
+      { id: 1, label: 'React Native (Expo)' },
+      { id: 2, label: 'Typescript' },
+      { id: 3, label: 'Zustand' },
+    ],
+  },
+  {
+    id: 9,
     name: 'Partner Mobile',
     description:
       'Partner Mobile is a tech company that provides high-speed fiber optic internet connectivity and offers a wide range of mobile phones and accessories. The platform ensures seamless user experience and reliable services through a scalable and secure backend system.',
@@ -165,7 +228,7 @@ export const projects: Project[] = [
     isMaintaining: true,
   },
   {
-    id: 8,
+    id: 10,
     name: 'Tiqpay',
     description:
       'TiqPay is a cutting-edge fintech application designed to streamline transactions and elevate your financial management experience.',
