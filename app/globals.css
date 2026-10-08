@@ -71,3 +71,43 @@ summary:focus-visible {
 }
 
 
+
+/* Subtle interactions */
+.link-line {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  padding-bottom: 2px;
+  transition: background-size 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.2s ease;
+}
+
+.link-line:hover,
+.link-line:focus-visible {
+  background-size: 100% 1px;
+}
+
+.press {
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.press:hover {
+  transform: translateY(-1px);
+}
+
+.press:active {
+  transform: translateY(0) scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-line,
+  .press {
+    transition: none;
+  }
+  .press:hover,
+  .press:active {
+    transform: none;
+  }
+}

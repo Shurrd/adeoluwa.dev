@@ -32,6 +32,7 @@ type Url = {
   url: string;
   name: string;
   icon: IconType;
+  comingSoon?: boolean;
 };
 
 export interface Technologies {

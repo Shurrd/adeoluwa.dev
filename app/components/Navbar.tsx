@@ -31,7 +31,11 @@ const Navbar = () => {
   return (
     <nav className="fixed left-0 top-3 z-30 w-full px-4">
       <div className="glass mx-auto flex max-w-2xl items-center justify-between rounded-full px-5 py-2.5">
-        <Link href="/" aria-label="Home">
+        <Link
+          href="/"
+          aria-label="Home"
+          className="transition-transform duration-300 hover:rotate-6 hover:scale-110 active:scale-95 motion-reduce:transition-none motion-reduce:hover:transform-none"
+        >
           <Image src="/logo.svg" alt="logo" width={30} height={30} />
         </Link>
         <div className="flex items-center gap-6 text-xs">
@@ -39,7 +43,7 @@ const Navbar = () => {
             <Link
               key={id}
               href={url}
-              className={`transition-colors duration-200 hover:text-white ${
+              className={`link-line press hover:text-white ${
                 active === url ? "text-white" : "text-[#6b6b6e]"
               }`}
             >

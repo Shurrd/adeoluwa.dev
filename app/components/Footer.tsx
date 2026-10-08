@@ -17,7 +17,7 @@ const Footer = () => {
         </p>
         <Link
           href="mailto:engraaadeyemi@gmail.com"
-          className="w-max text-sm text-white underline underline-offset-4 decoration-white/30 transition-colors hover:decoration-white"
+          className="press w-max text-sm text-white underline underline-offset-4 decoration-white/30 transition-colors hover:decoration-white"
         >
           engraaadeyemi@gmail.com
         </Link>
