@@ -4,6 +4,7 @@ import { readEnv, resolveSiteUrl } from '@/lib/env'
 import { readingTimeMinutes } from '@/lib/readingTime'
 import { pathsForPost } from '@/lib/revalidate'
 import { slugify, validateSlug } from '@/lib/slug'
+import { mediaSrc } from '@/lib/postView'
 import { lexical } from './helpers/content'
 
 describe('slug', () => {
@@ -71,6 +72,20 @@ describe('pathsForPost', () => {
       expect.arrayContaining([
         '/', '/page/[page]', '/feed.xml', '/sitemap.xml', '/new', '/old', '/category/c', '/tag/t1', '/tag/t2',
       ]),
+    )
+  })
+})
+
+describe('mediaSrc', () => {
+  const file = '/api/media/file/photo%3Dformat%26w%3D1200.jpg'
+  it('turns same-site absolute media URLs into relative paths, keeping the encoding', () => {
+    expect(mediaSrc(`https://blog.adeoluwa.dev${file}`)).toBe(file)
+    expect(mediaSrc(`http://localhost:3000${file}?v=2`)).toBe(`${file}?v=2`)
+  })
+  it('leaves relative and external URLs alone', () => {
+    expect(mediaSrc(file)).toBe(file)
+    expect(mediaSrc('https://abc.public.blob.vercel-storage.com/x.jpg')).toBe(
+      'https://abc.public.blob.vercel-storage.com/x.jpg',
     )
   })
 })
