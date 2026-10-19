@@ -23,6 +23,11 @@ export const CodeBlock: Block = {
         },
       ],
     },
-    { name: 'code', type: 'code', required: true },
+    {
+      name: 'code',
+      type: 'code',
+      required: true,
+      admin: { components: { Field: '/fields/CodeBlockField#CodeBlockField' } },
+    },
   ],
 }
