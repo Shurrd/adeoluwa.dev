@@ -1,0 +1,25 @@
+export const CODE_LANGUAGES = [
+  { label: 'Plain text', value: 'text' },
+  { label: 'TypeScript', value: 'typescript' },
+  { label: 'JavaScript', value: 'javascript' },
+  { label: 'TSX', value: 'tsx' },
+  { label: 'JSX', value: 'jsx' },
+  { label: 'JSON', value: 'json' },
+  { label: 'HTML', value: 'html' },
+  { label: 'CSS', value: 'css' },
+  { label: 'Bash', value: 'bash' },
+  { label: 'SQL', value: 'sql' },
+  { label: 'YAML', value: 'yaml' },
+  { label: 'Dockerfile', value: 'dockerfile' },
+  { label: 'Python', value: 'python' },
+  { label: 'Go', value: 'go' },
+  { label: 'Rust', value: 'rust' },
+  { label: 'Java', value: 'java' },
+  { label: 'Kotlin', value: 'kotlin' },
+  { label: 'Swift', value: 'swift' },
+  { label: 'Dart', value: 'dart' },
+  { label: 'Markdown', value: 'markdown' },
+  { label: 'Diff', value: 'diff' },
+] as const
+
+export const CODE_LANGUAGE_VALUES: string[] = CODE_LANGUAGES.map((l) => l.value)
