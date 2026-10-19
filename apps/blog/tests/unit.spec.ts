@@ -51,6 +51,11 @@ describe('env validation', () => {
     )
     expect(() => readEnv({ ...valid, PAYLOAD_SECRET: 'short' })).toThrow(/PAYLOAD_SECRET/)
   })
+  it('requires Blob storage on Vercel production only', () => {
+    expect(() => readEnv({ ...valid, VERCEL_ENV: 'production' })).toThrow(/BLOB_READ_WRITE_TOKEN/)
+    expect(readEnv({ ...valid, VERCEL_ENV: 'production', BLOB_READ_WRITE_TOKEN: 'tok' }).blobToken).toBe('tok')
+    expect(() => readEnv({ ...valid, VERCEL_ENV: 'preview' })).not.toThrow()
+  })
   it('falls back to the Vercel deployment host for previews, never localhost in production', () => {
     expect(resolveSiteUrl({ VERCEL_URL: 'blog-git-x.vercel.app', NODE_ENV: 'production' })).toBe(
       'https://blog-git-x.vercel.app',

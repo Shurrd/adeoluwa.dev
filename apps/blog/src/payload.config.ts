@@ -50,6 +50,8 @@ export default buildConfig({
       token: env.blobToken,
       // Upload straight from the browser to Blob; Vercel functions cap request bodies at 4.5 MB.
       clientUploads: true,
+      // Same database schema with or without a token, so migrations generated locally match production.
+      alwaysInsertFields: true,
     }),
   ],
 })

@@ -47,6 +47,14 @@ export function readEnv(source: EnvSource = process.env): Env {
     problems.push(`PREVIEW_SECRET is required and must be at least ${MIN_SECRET_LENGTH} characters`)
   }
 
+  // Serverless file systems are read-only, so production without Blob storage
+  // would only fail later, at the first upload.
+  if (source.VERCEL_ENV === 'production' && !source.BLOB_READ_WRITE_TOKEN) {
+    problems.push(
+      'BLOB_READ_WRITE_TOKEN is required in production (create a Vercel Blob store and connect it to the project)',
+    )
+  }
+
   let siteUrl: string | undefined
   try {
     siteUrl = resolveSiteUrl(source)
