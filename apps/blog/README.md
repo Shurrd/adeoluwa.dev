@@ -113,7 +113,7 @@ Vitest, against a real throwaway PostgreSQL started by `tests/globalSetup.ts` (v
 The portfolio keeps its existing Vercel project untouched. The blog is a **second Vercel project from the same repository**.
 
 1. **Database.** Create a managed PostgreSQL (Neon, Supabase, Vercel Postgres via the Marketplace, RDS…). Copy its *pooled* connection string. If your pooler (PgBouncer in transaction mode) rejects migrations, run `npm run migrate` once from your machine with the *direct* connection string and use `npm run build` as the build command instead.
-2. **Project.** Vercel → *Add New… → Project* → import the same Git repository → set **Root Directory** to `apps/blog` (framework preset: Next.js). Override **Build Command** with `npm run build:prod`.
+2. **Project.** Vercel → *Add New… → Project* → import the same Git repository → set **Root Directory** to `apps/blog` (framework preset: Next.js). The Build Command (`npm run build:prod`, which applies migrations first) is set in `vercel.json`, so no dashboard override is needed.
 3. **Media.** Project → *Storage* → create a **Blob** store and connect it; Vercel adds `BLOB_READ_WRITE_TOKEN`. Uploads go browser → Blob directly, avoiding the 4.5 MB function body limit. Uploaded files are served from public Blob URLs; the media collection is therefore public-readable (only staff can write), so do not upload anything confidential.
 4. **Environment variables** (Production, and Preview if you want previews): `DATABASE_URL`, `PAYLOAD_SECRET`, `PREVIEW_SECRET`, `SITE_URL=https://blog.adeoluwa.dev` (Production only), `BLOB_READ_WRITE_TOKEN`. Use different secrets from local.
 5. **Deploy**, then immediately create the admin user (see above) and run `npm run seed` or create an author in the admin.
