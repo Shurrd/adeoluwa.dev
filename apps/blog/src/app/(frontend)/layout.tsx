@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { draftMode } from 'next/headers'
@@ -40,6 +41,7 @@ export default async function FrontendLayout({ children }: { children: React.Rea
           <main>{children}</main>
           <SiteFooter />
         </div>
+        <Analytics />
       </body>
     </html>
   )
