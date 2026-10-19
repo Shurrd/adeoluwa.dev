@@ -67,6 +67,7 @@ Schema changes ship as migrations in `src/migrations` (the initial one is commit
 
 ```bash
 npm run migrate:create -- add_something   # after editing a collection; review and commit the output
+                                          # (schema is identical with or without BLOB_READ_WRITE_TOKEN)
 npm run migrate                           # apply
 npm run generate:types                    # refresh src/payload-types.ts
 ```
