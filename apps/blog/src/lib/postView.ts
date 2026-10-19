@@ -23,3 +23,20 @@ export function formatDate(value: string | null | undefined): string {
 
 export const formatReadingTime = (minutes: number | null | undefined) =>
   `${minutes && minutes > 0 ? minutes : 1} min read`
+
+const LOCAL_MEDIA_PREFIX = '/api/media/file/'
+
+/**
+ * Payload returns absolute media URLs (it knows the site origin). next/image only
+ * optimises same-site images when they are relative, and the origin differs
+ * between production, previews and local dev, so use the path form.
+ */
+export function mediaSrc(url: string): string {
+  if (!/^https?:\/\//.test(url)) return url
+  try {
+    const { pathname, search } = new URL(url)
+    return pathname.startsWith(LOCAL_MEDIA_PREFIX) ? `${pathname}${search}` : url
+  } catch {
+    return url
+  }
+}

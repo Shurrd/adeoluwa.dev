@@ -7,6 +7,7 @@ import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical
 import Image from 'next/image'
 import type { CodeBlock as CodeBlockFields, Media } from '@/payload-types'
 import { collectHeadings } from '@/lib/headings'
+import { mediaSrc } from '@/lib/postView'
 import { CodeBlock } from './CodeBlock'
 
 type Nodes = DefaultNodeTypes | SerializedBlockNode<CodeBlockFields>
@@ -17,7 +18,7 @@ export function ArticleImage({ media, priority = false }: { media: Media; priori
   return (
     <figure className="figure">
       <Image
-        src={media.url}
+        src={mediaSrc(media.url)}
         alt={media.alt}
         width={media.width || 1200}
         height={media.height || 675}
