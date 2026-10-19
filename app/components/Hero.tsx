@@ -54,6 +54,12 @@ const Hero = () => {
           </Link>
         ))}
         <Link
+          href="https://blog.adeoluwa.dev"
+          className="link-line press hover:text-white"
+        >
+          Blog
+        </Link>
+        <Link
           href="https://calendly.com/engraaadeyemi/30min?month=2024-07"
           target="_blank"
           className="link-line press hover:text-white"
